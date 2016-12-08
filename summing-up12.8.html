@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<h1>string对象,Array对象,object对象</h1>
+		<h2>string对象</h2>
+		<h4>调用</h4>
+		<pre>
+			var n="1222223";
+			n.indexOf(searchvalue,fromindex)//字符,第几个
+			n.match(searchvalue/regexp)//match() 方法将检索字符串 stringObject，以找到一个或多个与 regexp 匹配的文本
+			n.slice(start,end)//开始,结束
+			n.split(separator,howmany)//正则,返回值最大长度
+			n.substr(start,length)//开始,长度
+			
+		</pre>
+		<h2>Array对象</h2>
+		<h3>申明数组的几个方式</h3>
+		
+		<pre>
+			var arr=[];
+			var arr=new Array[];
+			var arr=new Array[1,2]
+		</pre>
+		<h4>Array的调用</h4>
+		<pre>
+			var arr=[];
+			arr.push("1");
+			console.log(arr.push("2"));//返回长度
+			console.log(arr);
+			console.log(arr.unshift("0"));//返回长度
+			console.log(arr);
+			console.log(arr.shift());//返回元素
+			console.log(arr);
+			console.log(arr.pop());//返回元素
+			console.log(arr);
+			
+			var arr = [1,2,3,4,5];
+			var str = "12345"
+			console.log(arr.slice(1,3));//2,3
+			console.log(str.slice(1,3));//2,3
+			console.log(arr);//1,2,3,4,5
+		</pre>
+		<h2>object对象</h2>
+		<h4>调用</h4>
+		<pre>
+			var obj1 = {};
+			var i;
+			for(i in obj1{
+				console.log(i + ":" + obj1[i]);
+			}//对象的访问
+			
+		</pre>
+		<h4>作业</h4>
+		<div id="box"></div>
+	</body>
+	<script type="text/javascript">
+		var box=document.getElementById("box");
+		var str;
+		var arr=[1,2,3,4]
+		var classlist = [
+			{name:"姓名",age:"年龄",sex:"性别",sort:"成绩"},
+			{name:"苏雁雁",sex:"女",age:"23",sort:"60"},
+	    	{name:"张荣荣",sex:"男",age:"23",sort:"60"},
+	    	{name:"茅伟峰",sex:"男",age:"23",sort:"60"},
+	    	{name:"沈雨潮",sex:"男",age:"23",sort:"60"},
+	    	{name:"殷永贵",sex:"男",age:"23",sort:"60"},
+	    	{name:"唐凯强",sex:"男",age:"23",sort:"60"},
+	    	{name:"吾隽杰",sex:"男",age:"23",sort:"60"},
+	    	{name:"何松",sex:"男",age:"23",sort:"60"},
+	    	{name:"冯博扬",sex:"男",age:"23",sort:"60"},
+	    	{name:"方本领",sex:"男",age:"23",sort:"60"},
+	    	{name:"高健",sex:"男",age:"23",sort:"60"},
+	    	{name:"俞一帆",sex:"男",age:"23",sort:"60"},
+	    	{name:"孙展城",sex:"男",age:"23",sort:"60"},
+	    	{name:"贾轩",sex:"男",age:"23",sort:"60"},
+	    	{name:"宓凯华",sex:"男",age:"23",sort:"60"},
+	    	{name:"金正勇",sex:"男",age:"23",sort:"60"},
+	    	{name:"陈麟鑫",sex:"男",age:"23",sort:"60"},
+	    	{name:"黄晨辉",sex:"男",age:"23",sort:"60"},
+	    	{name:"赵天成",sex:"男",age:"23",sort:"60"}
+		];
+		str="<table border='1'>"	
+			for (var j = 0;j < 20 ;j++) {
+				str += "<tr>";
+				str += "<td>"+classlist[j].name+"</td>";
+				str += "<td>"+classlist[j].age+ "</td>";
+				str += "<td>"+classlist[j].sex+ "</td>";
+				str += "<td>"+classlist[j].sort+"</td>";
+				str += "</tr>";
+			}
+			
+		str += "</table>";
+		box.innerHTML= str;
+	</script>
+</html>
