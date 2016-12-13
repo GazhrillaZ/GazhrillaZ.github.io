@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			#bbox {
+				width: 360px;
+				height: 500px;
+				background: #666;
+				color: #fff;
+			}
+			
+			#now {
+				font-size: 40px;
+			}
+			
+			#date1 {
+				width: 350px;
+				height: 35px;
+				font-size: 20px;
+				margin-left: 5px;
+				border-bottom: 1px solid #ddd;
+			}
+			
+			#select {
+				width: 350px;
+				height: 50px;
+				line-height: 50px;
+			}
+			
+			#box {
+				width: 350px;
+			}
+			
+			#box div {
+				width: 50px;
+				height: 50px;
+				text-align: center;
+				line-height: 50px;
+				float: left;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="bbox">
+			<div id="now"></div>
+			<div id="date1"></div>
+			<div id="select">
+				<select id="year" onchange="foo()">
+					<option value="2017">2017</option>
+					<option value="2016" selected="ture">2016</option>
+					<option value="2015">2015</option>
+					<option value="2014">2014</option>
+					<option value="2013">2013</option>
+					<option value="2012">2012</option>
+				</select>年
+				<select id="mouth" onchange="foo()">
+					<option value="12" selected="ture">12</option>
+					<option value="11">11</option>
+					<option value="10">10</option>
+					<option value="9">9</option>
+					<option value="8">8</option>
+					<option value="7">7</option>
+					<option value="6">6</option>
+					<option value="5">5</option>
+					<option value="4">4</option>
+					<option value="3">3</option>
+					<option value="2">2</option>
+					<option value="1">1</option>
+				</select>月</div>
+			<div id="box"></div>
+		</div>
+		<script type="text/javascript">
+			var now = document.getElementById('now');
+			var date1 = document.getElementById('date1');
+			var box = document.getElementById('box');
+			var secyear = document.getElementById('year');
+			var optyear = secyear.getElementsByTagName('option');
+			var secmouth = document.getElementById('mouth');
+			var optmouth = secmouth.getElementsByTagName('option');
+			var Nowtime = new Date();
+			var Nowyear = Nowtime.getFullYear();
+			var Nowmouth = Nowtime.getMonth() + 1;
+			var todayyear = Nowyear;
+			var todaymouth = Nowmouth;
+
+			function nowtime() {
+				var Nowtime = new Date();
+				var Nowyear = Nowtime.getFullYear();
+				var Nowmouth = Nowtime.getMonth() + 1;
+				var Nowdate = Nowtime.getDate();
+				var Nowweek = Nowtime.getDay();
+				var Nowhour = Nowtime.getHours();
+				var Nowmin = Nowtime.getMinutes();
+				var Nowsec = Nowtime.getSeconds();
+				var c = Math.floor(Nowmin / 10);
+				var d = Nowmin % 10;
+				var a = Math.floor(Nowsec / 10);
+				var b = Nowsec % 10;
+				now.innerHTML = Nowhour + ":" + c+d + ":" + a + b;
+				date1.innerHTML = Nowyear + "年" + Nowmouth + "月" + Nowdate + "日";
+			}
+			nowtime();
+			setInterval(nowtime, 1000);
+
+			function foo() {
+				var year = secyear.value;
+				var mouth = secmouth.value;
+				changeday(year, mouth);
+			}
+
+			function changeday(year, mouth) {
+				var arr = ["日", "一", "二", "三", "四", "五", "六"];
+				var today = new Date();
+				var redday = today.getDate();
+				var timeNow = new Date(year, mouth, 0);
+				var dateNow = timeNow.getDate();
+				timeNow.setDate(1);
+				var weekNow = timeNow.getDay();
+				var timeLast = new Date(year, mouth - 1, 0);
+				var dateLast = timeLast.getDate();
+				console.log(dateLast);
+				var str = "";
+				var k = l = p = 0;
+				var o = dateLast - weekNow;
+				var week = Math.ceil((dateNow + weekNow) / 7);
+				for(var i = 0; i < 7; i++) {
+					str += "<div>" + arr[i] + "</div>";
+				}
+				for(var i = 0; i < 7; i++) {
+					for(var j = 0; j < week; j++) {
+						if(l < weekNow) {
+							str += "<div style='color:#aaa;'>" + (o + 1) + "</div>";
+							o++;
+							l++;
+						} else {
+							if(k >= dateNow) {
+								str += "<div style='color:#aaa;'>" + (p + 1) + "</div>";
+								p++;
+							} else if(k == redday - 1 && todayyear == year && todaymouth == mouth) {
+								str += "<div style='background:#aaa;'>" + (k + 1) + "</div>";
+							} else {
+								str += "<div>" + (k + 1) + "</div>";
+							}
+							k++;
+						}
+					}
+				}
+				box.innerHTML = str;
+			}
+			changeday(Nowyear, Nowmouth);
+		</script>
+	</body>
+
+</html>
