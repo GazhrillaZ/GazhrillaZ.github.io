@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<div id="div">
+			DIV
+		</div>
+		<div id="div2">
+			
+		</div>
+		<p></p>
+		<p></p>
+		<button id="btn">click</button>
+		<button id="btn1">clickDiv</button>
+		<img src="img/1.png" alt="" id="img" />
+		<script src="js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#btn").click(function(){
+					$("#img").removeAttr("src");
+				})
+				$("#btn1").click(function(){
+
+//					//设置延迟
+					$('#div').slideUp(300).delay(800).fadeIn(400);
+//					
+				})
+				
+		});
+		</script>
+	</body>
+</html>
