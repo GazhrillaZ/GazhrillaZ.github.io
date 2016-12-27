@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{padding: 0;margin: 0;font-family: "微软雅黑";}
+			pre{
+				background: cadetblue;
+			}
+			div{
+				width:1000px;
+				height: auto;
+				margin: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>JQuery DOM and 动画</h1>
+		<pre>
+			$(document).ready(function(){
+				$("#btn").click(function(){
+					$("#img").removeAttr("src");
+				})
+				$("#btn1").click(function(){
+//					//相当于innHTML
+//					console.log($("#div").html("<span>span</span>"));
+//					//相当于input value
+//					console.log($("#div").val("value"));
+//					//相当于innerText
+//					console.log($("#div").text("<span>span</span>"));
+//					//内部插入
+//					//后
+//					$("#div").append("<span>span</span>");
+//					$("<span>span</span>").appendTo("#div");
+//					//前
+//					$("#div").prepend("<span>span</span>");
+//					$("<span>span</span>").prependTo()("#div");
+//					//外部插入(after,before,insetafter,insertbefore)
+					//清空
+//					$("#div").empty();
+//					//删除DOM下的所有元素(从DOM中把所有段落删除)
+//					$("#div").remove();
+//					//克隆匹配的DOM元素并且选中这些克隆的副本。
+//					$("#div").clone().prependTo("#div2");
+//					//取得匹配元素当前计算的高度值（px）。
+//					$("p").height(20);
+//					//取得第一个匹配元素当前计算的宽度值（px）。
+//					$("p").width(20);
+//					//获取第一个匹配元素内部区域高度/宽度（包括补白、不包括边框）。
+//					$("p:first").text(innerHeight + "," + innerWidth);
+//					//获取第一个匹配元素外部高度（默认包括补白和边框）。
+//					$("p:last").text(outerHeight + "," + outerWidth);
+//					//获取匹配元素相对滚动条顶部的偏移。
+//					$("p:last").text( "scrollTop:" + $("p:first").scrollTop() );
+//					//获取匹配元素相对滚动条左侧的偏移
+//					$("p:last").text( "scrollLeft:" + $("p:first").scrollLeft() );
+//					//获取匹配元素相对父元素的偏移。
+//					var p = $("p:first");
+//					var position = p.position();
+//					$("p:last").html( "left: " + $("p:first").position().left + ", top: " + p.position().top );
+//					//显示隐藏(show,hide,toggle)
+//					$("#div").toggle();
+//					//滑动(卷帘)(show,hide,toggle)
+//					$("#div").slideToggle();
+//					//淡入淡出
+//					$("#div").fadeToggle();
+//					//自定义animate(p,[s],[e],[fn])
+//					//params:一组包含作为动画属性和终值的样式属性和及其值的集合
+//					//speed:三种预定速度之一的字符串("slow","normal", or "fast")或表示动画时长的毫秒数值(如：1000)
+//					//easing:要使用的擦除效果的名称(需要插件支持).默认jQuery提供"linear" 和 "swing".
+//					//fn:在动画完成时执行的函数，每个元素执行一次。
+//					$("#div").animate({ 
+//  					width: "90%",
+//  					height: "100%", 
+//  					fontSize: "10em", 
+//  					borderWidth: 10
+//					}, 1000 );
+//					//stop()立即停止动画
+//					//设置延迟
+//					$('#div').slideUp(300).delay(800).fadeIn(400);
+					$.ajax({
+						url:'1.txt',
+						type:'GET',
+						dataType:'text',
+						data:'',
+						success:function(msg){
+							console.log(msg);
+							$("#div").html(msg);
+						},
+						error:function(error){
+							console.log(error);
+						}
+					});
+				})
+		</pre>
+		<h2><a href="JQueryDOM&动画.html">效果演示</a></h2>
+	</body>
+</html>
