@@ -1,0 +1,83 @@
+*{padding: 0;
+			  margin:0;}
+			  
+			  #aboutMe{
+			  	width:1200px;
+			  	height:290px;
+			  	background: yellow;
+			  	margin:auto;
+			  	position: relative;
+			  	margin-top:20px;
+			  	background:url(../img/images/about_us.jpg);
+			  	background-position: center center;
+			  }
+			  /*#aboutMe img{position: absolute;
+			              left:-360px;
+			              top:0;}*/
+			  #main{width: 1200px;
+			        height:auto;
+			        background: #d2e9ff;
+			        margin:auto;
+			        margin-top:70px;
+			        	font-family: 宋体;
+		
+			        }
+			  
+			  #content{margin-top:30px;}
+			  #content span{
+			  	display: block;
+			  	text-indent: 2em;
+			  	margin-top: 2px;
+			  	line-height: 30px;
+			  }
+			  #line{
+			  width: 1200px;
+			  height: 100px;
+			  border-bottom:1px #aaa solid;
+			  }
+			  #shi p {
+			  	margin-top: 15px;
+			  }
+			  #shi span{
+			  	   font-weight: bold;
+			  }
+			  #shi img{margin-top: 20px;}
+			  #team{width: 1200px;
+			        height:260px;
+			         margin-top: 30px;
+			      /*  border: 1px #ddd solid;*/}
+			  #team div{
+			  	    width: 147px;
+			  	    height:260px;
+			  	    float:left;
+			  	    border: 1px #ddd solid;
+			  	  /*  background: blueviolet;*/
+			  }
+			  #join{
+			  	width: 1200px;
+			  	height:488px;
+			  /*	background: black;*/
+			  	margin-top:30px;
+			  	
+			  }
+			  #left{
+			  	width: 600px;
+			  	height:488px;
+			  	float: left;
+			  /*	background: blue;*/
+			  }
+			   #right{
+			  	width: 600px;
+			  	height:488px;
+			  	float: left;
+			/*  	background: red;*/
+			  }
+			  #right img{
+			  	margin-top: 30px;
+			  	margin-left:20px;
+			  }
+			  #left p{
+			  	font-weight: bolder;
+			  	font-size: 28px;
+			  	font-family: "微软雅黑";
+			  }
