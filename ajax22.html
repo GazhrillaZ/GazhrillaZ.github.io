@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#form {
+				width: 1100px;
+				margin: 0 auto;
+				box-sizing: border-box;
+				text-align: center;
+			}
+			
+			#form table {
+				width: 1098px;
+				border-collapse: collapse;
+				/*background: black;*/
+			}
+			
+			#form tr {
+				height: 50px;
+			}
+			
+			#form td {
+				width: 183px;
+				background: #fff;
+			}
+			
+			.inp_fir {
+				width: 189px;
+				height: 46px;
+				border: none;
+			}
+			
+			.inp_scd {
+				width: 375px;
+				height: 46px;
+				border: none;
+			}
+			
+			.inp_srd {
+				width: 961px;
+				height: 46px;
+				border: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="form">
+			<h1>禾米科技免费培训申请表</h1>
+			<p>方法一、在线填写（如果信息提交失败或者使用的是IE10以下版本的浏览器请选择方式二）</p>
+			<form action="" method="post">
+				<table border="" cellspacing="" cellpadding="">
+					<tr>
+						<td colspan="6" style="text-align: left">个人信息及联系方式</td>
+					</tr>
+					<tr>
+						<td>姓名</td>
+						<td><input type="text" value="" id="info_name" class="inp_fir" /></td>
+						<td>性别</td>
+						<td>
+							<select name="" id="info_sex">
+								<option value="">男</option>
+								<option value="">女</option>
+							</select>
+						</td>
+						<td>出生年月</td>
+						<td><input type="month" value="" id="info_birthday" class="inp_fir" /></td>
+					</tr>
+					<tr>
+						<td>手机号</td>
+						<td><input type="text" value="" id="info_phonenum" class="inp_fir" /></td>
+						<td>政治面貌</td>
+						<td>
+							<select name="" id="info_political">
+								<option value="">团员</option>
+								<option value="">党员</option>
+								<option value="">吃瓜群众</option>
+							</select>
+						</td>
+						<td>QQ</td>
+						<td><input type="text" value="" id="info_qq" class="inp_fir" /></td>
+					</tr>
+					<tr>
+						<td>学院</td>
+						<td><input type="text" value="" id="info_college" class="inp_fir" /></td>
+						<td>系</td>
+						<td><input type="text" value="" id="info_major" class="inp_fir" /></td>
+						<td>专业</td>
+						<td><input type="text" value="" id="info_majorMemo" class="inp_fir" /></td>
+					</tr>
+					<tr>
+						<td colspan="6" style="text-align: left">家庭联系方式</td>
+					</tr>
+					<tr>
+						<td>父亲姓名</td>
+						<td colspan="2"><input type="text" value="" id="info_fatherName" class="inp_scd" /></td>
+						<td>父亲电话</td>
+						<td colspan="2"><input type="text" value="" id="info_fatherMobile" class="inp_scd" /></td>
+
+					</tr>
+					<tr>
+						<td>母亲姓名</td>
+						<td colspan="2"><input type="text" value="" id="info_matherName" class="inp_scd" /></td>
+						<td>母亲电话</td>
+						<td colspan="2"><input type="text" value="" id="info_matherMobile" class="inp_scd" /></td>
+					</tr>
+					<tr>
+						<td>家庭住址</td>
+						<td colspan="5" style="text-align: left"><input type="text" value="" id="info_homeAddress" class="inp_srd" /></td>
+					</tr>
+					<tr>
+						<td>信息来源</td>
+						<td colspan="5" style="text-align: left">
+							<input type="radio" name="info1" id="" value="" />1、熟人介绍
+							<input type="radio" name="info1" id="" value="" />2、杂志
+							<input type="radio" name="info1" id="" value="" />3、媒体广告
+							<input type="radio" name="info1" id="" value="" />4、其他
+						</td>
+					</tr>
+					<tr>
+						<td colspan="6" style="text-align: left">个人能力以及自我评价</td>
+					</tr>
+					<tr style="height: 100px;">
+						<td>专业能力描述</td>
+						<td colspan="5" style="text-align: left"><input type="text" value="" id="info_selfMemo" class="inp_srd" /></td>
+					</tr>
+					<tr style="height: 100px;">
+						<td>个人能力描述</td>
+						<td colspan="5" style="text-align: left"><input type="text" value="" id="info_selfMemo2" class="inp_srd" /></td>
+					</tr>
+				</table>
+
+				<button id="sub">提交</button>
+				<script src="js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$("#sub").click(function() {
+							var nameL = $("#info_name").val();
+							var sex = $("#info_sex").val();
+							var birthday = $("#info_birthday").val();
+							var political = $("#info_political").val();
+							var MnameL = $("#info_matherName").val();
+							var FnameL = $("#info_fatherName").val();
+							var PHnum = $("#info_phonenum").val();
+							var MPHnum = $("#info_matherMobile").val();
+							var FPHnum = $("#info_fatherMobile").val();
+							var reg = /^1[3|4|5|7|8][0-9]{9}$/;
+							var collgeL = $("#info_college").val();
+							var majorL = $("#info_major").val();
+							var majorML = $("#info_majorMemo").val();
+							var QQL = $("#info_qq").val();
+							var briD = $("#info_birthday").val();
+							var adress = $("#info_homeAddress").val();
+							var self1 = $("#info_selfMemo").val();
+							var self2 = $("#info_selfMemo2").val();
+//							if(self1 = "") {
+//								console.log("专业描述不能为空")
+//								return false;
+//							}
+//							if(self2 = "") {
+//								console.log("个人描述不能为空")
+//								return false;
+//							}
+//							if(adress = "") {
+//								console.log("地址不能为空")
+//								return false;
+//							}
+//							if(briD = "") {
+//								console.log("请选择出生年月")
+//								return false;
+//							}
+//							if(nameL.length < 2 || nameL.length > 20) {
+//								console.log("姓名需要在2-20位")
+//								return false;
+//							}
+//							if(MnameL.length < 2 || nameL.length > 20) {
+//								console.log("妈妈姓名需要在2-20位")
+//								return false;
+//							}
+//							if(FnameL.length < 2 || nameL.length > 20) {
+//								console.log("爸爸姓名需要在2-20位")
+//								return false;
+//							}
+//							if(QQL.length < 6 || QQL.length > 11) {
+//								console.log("QQ需要在6-11位")
+//								return false;
+//							}
+//							if(collgeL.length < 4 || collgeL.length > 20) {
+//								console.log("collge需要在4-20位")
+//								return false;
+//							}
+//							if(majorL.length < 4 || majorL.length > 20) {
+//								console.log("系需要在4-20位")
+//								return false;
+//							}
+//							if(majorML.length < 4 || majorML.length > 20) {
+//								console.log("专业需要在4-20位")
+//								return false;
+//							}
+//
+//							if(!reg.test(PHnum)) {
+//								console.log("请输入正确的手机号")
+//								return false;
+//							}
+//							if(!reg.test(FPHnum)) {
+//								console.log("请输入正确的手机号")
+//								return false;
+//							}
+//							if(!reg.test(MPHnum)) {
+//								console.log("请输入正确的手机号")
+//								return false;
+//							}
+//							var m = 1;
+//							for(var i = 0; i < $("input[name='1']").length; i++) {
+//								if($("input[name='info1']")[i].checked == ture) {
+//									m = 1;
+//								}
+//							}
+//							if(m == 0) {
+//								console.log("请选择信息来源");
+//								return false;
+//							}
+							source = "母鸡";
+							var _url = "http://www.hemijiaoyu.com/service/addApply";
+							var _data = {};
+							  _data.name = "赵天成";
+        _data.sex = "男";
+        _data.birthday = "199001";
+        _data.mobile = "15896923111";
+        _data.political = "党员";
+        _data.college = "大学";
+        _data.qq = "12345678";
+        _data.faculty = "学院";
+        _data.major = "学院";
+        _data.fatherName = "赵敏";
+        _data.fatherMobile = "15896923111";
+        _data.matherName = "赵敏";
+        _data.matherMobile = "15896923111";
+        _data.homeAddress = "禾米";
+        _data.source = "杂志";
+        _data.majorMemo = "良好....";
+        _data.selfMemo = "良好";
+
+
+
+							$.ajax({
+
+								url: _url,
+								data: _data,
+								dataType: 'text',
+								type: 'POST',
+
+								success: function(msg) {
+									console.log("上传成功:" + msg);
+								},
+								error: function(error) {
+									console.log("上传失败:" + error);
+								}
+
+							});
+						})
+					});
+				</script>
+
+				<p>方式二、
+					<a href="">申请表下载</a>填好表格后请及时发送至hemikejihr@hemikeji.com以便联系面试，谢谢！</p>
+
+			</form>
+		</div>
+
+	</body>
+
+</html>
