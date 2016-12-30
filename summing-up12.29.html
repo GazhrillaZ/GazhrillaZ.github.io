@@ -85,244 +85,212 @@ alert(e);
 		&lt;/style>
 	&lt;/head>
 	&lt;body>
+		 &lt;!DOCTYPE html>
+        &lt;html>
+	    &lt;head>
+		&lt;meta charset="UTF-8">
+		&lt;title>&lt;/title>		
+		&lt;style type="text/css">
+			table{border-collapse: collapse;}
+			tr{height: 50px;}
+			h1,p{text-align: center;}
+			input,select,textarea{border: 0;}
+			table{margin: auto;}
+			.Rad{height: 50px;width: 182px;}
+			.er{height: 50px;width: 260px;}			
+		&lt;/style>
+	&lt;/head>
+	&lt;body>
 		&lt;h1>禾米科技免费培训申请表&lt;/h1>
-		&lt;h5>方式一：在线填写（如果信息提交失败或者您使用的是IE10版本一下的浏览器请选择方式二&lt;/h5>
-		&lt;form action="">
-			&lt;table>
-				&lt;tr>&lt;td colspan="6" style="text-align: left;">个人信息及联系方式&lt;/td>&lt;/tr>
+		&lt;p>方式一.在线填写(如果信息提交失败或者您使用的是IE10版本以下的浏览器请选择方式二)&lt;/p>
+		&lt;form action="" method="post">
+			&lt;table border="1" cellspacing="" cellpadding="">
+				&lt;tr>&lt;th colspan="6">个人信息及联系方式&lt;/th>&lt;/tr>
 				&lt;tr>
-					&lt;td>姓名&lt;/td>
-					&lt;td>&lt;input type="text" class="one" id="name"/>&lt;/td>
-					&lt;td>性别&lt;/td>
-					&lt;td>&lt;select name="" id="sex">
-						&lt;option value="">男&lt;/option>
-						&lt;option value="">女&lt;/option>
-					&lt;/select>&lt;/td>
-					&lt;td>出生年月&lt;/td>
-					&lt;td>&lt;input type="month"  id="birthday"  />&lt;/td>
+					&lt;td>*姓名&lt;/td>
+					&lt;td>&lt;input type="text" / class="Rad" id="myname">&lt;/td>
+					&lt;td>*性别&lt;/td>
+					&lt;td>
+						&lt;select class="Rad" id="sex">
+						&lt;option>男&lt;/option>
+						&lt;option>女&lt;/option>
+					&lt;/select>
+					&lt;/td>					
+					&lt;td>*出生年月&lt;/td>
+					&lt;td>
+						&lt;input type="month" name="" id="birthday" value=""   style="width: 180px;" >
+					&lt;/td>	
 				&lt;/tr>
 				&lt;tr>
-					&lt;td>手机号码&lt;/td>
-					&lt;td>&lt;input type="text"  id="mobile" class="one"/>&lt;/td>
-					&lt;td>政治面貌&lt;/td>
-					&lt;td>&lt;select name="" id="political">
-						&lt;option value="">团员&lt;/option>
-						&lt;option value="">党员&lt;/option>
-						&lt;option value="">群众&lt;/option>
-					&lt;/select>&lt;/td>
-					&lt;td>QQ&lt;/td>
-					&lt;td>&lt;input type="text" class="one" id="qq"/>&lt;/td>
+					&lt;td>*手机号码&lt;/td>
+					&lt;td>&lt;input type="text" / class="Rad" id="mynumber">&lt;/td>
+					&lt;td>*政治面貌&lt;/td>
+					&lt;td >
+					&lt;select class="Rad" id="member">
+						&lt;option>团员&lt;/option>
+						&lt;option>党员&lt;/option>
+						&lt;option>群众&lt;/option>
+					&lt;/select>
+					&lt;/td>	
+					&lt;td>*QQ&lt;/td>
+					&lt;td>&lt;input type="text" / class="Rad" id="qq">&lt;/td>
 				&lt;/tr>
 				&lt;tr>
-					&lt;td>学院&lt;/td>
-					&lt;td>&lt;input type="text" class="one" id="college"/>&lt;/td>
-					&lt;td>系&lt;/td>
-					&lt;td>&lt;input type="text" class="one" id="faculty"/>&lt;/td>
-					&lt;td>专业&lt;/td>
-					&lt;td>&lt;input type="text" class="one" id="major"/>&lt;/td>
-				&lt;/tr>
-				&lt;tr>&lt;td colspan="6" style="text-align: left;">家庭联系方式&lt;/td>&lt;/tr>
-				&lt;tr>
-					&lt;td>父亲姓名&lt;/td>
-					&lt;td colspan="2">&lt;input type="text" class="two" id="fatherName"/>&lt;/td>
-					&lt;td>父亲电话&lt;/td>
-					&lt;td colspan="2">&lt;input type="text"  class="two" id="fatherMobile"/>&lt;/td>
+					&lt;td>*学院&lt;/td>
+					&lt;td>&lt;input type="text" / class="Rad" id="college">&lt;/td>
+					&lt;td>*系&lt;/td>
+					&lt;td>&lt;input type="text" / class="Rad" id="tie">&lt;/td>
+					&lt;td>*专业&lt;/td>
+					&lt;td>&lt;input type="text" / class="Rad" id="major">&lt;/td>
 				&lt;/tr>
 				&lt;tr>
-					&lt;td>母亲姓名&lt;/td>
-					&lt;td colspan="2">&lt;input type="text"  class="two" id="motherName"/>&lt;/td>
-					&lt;td>母亲电话&lt;/td>
-					&lt;td colspan="2">&lt;input type="text"  class="two" id="motherMobile"/>&lt;/td>
+					&lt;td colspan="6">家庭联系方式&lt;/td>
 				&lt;/tr>
 				&lt;tr>
-					&lt;td>家庭住址&lt;/td>
+					&lt;td >*父亲姓名&lt;/td>
+					&lt;td colspan="2">&lt;input type="text" /class="er" id="fathername">&lt;/td>
+					&lt;td>*父亲电话&lt;/td>
+					&lt;td colspan="2">&lt;input type="text" / class="er" id="fathernumber">&lt;/td>
+				&lt;/tr>
+				&lt;tr>
+					&lt;td>*母亲姓名&lt;/td>
+					&lt;td colspan="2">&lt;input type="text" / class="er" id="mothername">&lt;/td>
+					&lt;td>*母亲电话&lt;/td>
+					&lt;td colspan="2">&lt;input type="text" / class="er" id="mothernumber">&lt;/td>
+				&lt;/tr>
+				&lt;tr>
+					&lt;td>*家庭住址&lt;/td>
+					&lt;td colspan="5">&lt;input type="text" / style="height: 50px;width: 720px;" id="famliy">&lt;/td>
+				&lt;/tr>
+				&lt;tr>
+					&lt;td>*信息来源&lt;/td>
 					&lt;td colspan="5">
-					    &lt;input type="text" style="width: 750px;height: 50px;" id="address"/>
+					&lt;input type="radio" name="sd" value="熟人介绍">1.熟人介绍
+					&lt;input type="radio" name="sd" value="杂志">2.杂志
+					&lt;input type="radio" name="sd" value="媒体广告">3.媒体广告
+					&lt;input type="radio" name="sd" value="其他">4.其他
 					&lt;/td>
+				&lt;/tr>
+	&lt;tr>&lt;td  colspan="6">个人能力与自我评价(说明自己所学的专业知识与能力,获奖情况以及自己的优点与兴趣爱好)&lt;/td>&lt;/tr>
+				&lt;tr>
+					&lt;td>*专业能力描述&lt;/td>
+					&lt;td colspan="5">&lt;textarea style="height: 80px;width: 720px;" id="majorMemo">&lt;/textarea>&lt;/td>
 				&lt;/tr>
 				&lt;tr>
-					&lt;td>信息来源&lt;/td>
-					&lt;td colspan="5">&lt;input type="radio" name="1" id="" value="" />熟人介绍
-					&lt;input type="radio" name="1" id="" value="" />杂志
-					&lt;input type="radio" name="1" id="" value="" />媒体广告
-					&lt;input type="radio" name="1" id="" value="" />其他
-					&lt;/td>
-				&lt;/tr>
-				&lt;tr>&lt;td colspan="6" style="text-align: left;">
-				个人能力与自我评价（自己所学的专业知识与能力，获奖情况以及自己的优点与兴趣爱好）&lt;/td>
-				&lt;/tr>
-				&lt;tr style="height: 100px;">
-					&lt;td>专业能力描述&lt;/td>
-					&lt;td colspan="5">
-					&lt;textarea type="text" id="power" style="width: 750px;height: 100px;border:0">
-					&lt;/textarea>
-					&lt;/td>
-				&lt;/tr>
-				&lt;tr style="height: 100px;">
-					&lt;td>自我评价描述&lt;/td>
-					&lt;td colspan="5">
-					&lt;textarea type="text" id="selfMemo" style="width: 750px;height: 100px;border:0">
-					&lt;/textarea>
-					&lt;/td>
+					&lt;td>*自我评价描述&lt;/td>
+					&lt;td colspan="5">&lt;textarea style="height: 80px;width: 720px;" id="evaluate">&lt;/textarea>&lt;/td>
 				&lt;/tr>
 			&lt;/table>
-			&lt;input type="button" name="" id="upload" value="提交" />
+			&lt;input type="button" name="" id="btn" value="提交" style="margin: auto ;" >
 		&lt;/form>
-	&lt;/body>
-	&lt;script src="lib/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8">&lt;/script>
-	&lt;script type="text/javascript">
-		$(document).ready(function(){
-			$("#upload").click(function(){
-				var name = $("#name").val();
-				var sex = $("#sex").find("option:selected").text();
-				var birthday = $("#birthday").val();
-				var birth = birthday.split("-");
-				birthday = birth[0]+birth[1];
-				var mobile = $("#mobile").val();
-				var political = $("#political").find("option:selected").text();
-				var college = $("#college").val();
-				var qq = $("#qq").val();
-				var faculty = $("#faculty").val();
-				var major = $("#major").val();
-				var fatherName = $("#fatherName").val();
-				var fatherMobile = $("#fatherMobile").val();
-				var matherName = $("#motherName").val();
-				var matherMobile = $("#motherMobile").val();
-				var homeAddress = $("#address").val();
-				var source;
-				var majorMemo = $("#power").val();
-				var selfMemo = $("#selfMemo").val();
-				
-				if($("#name").val().length &lt; 2 || $("#name").val().length > 11){
-					alert("姓名格式不对");
+		
+
+		&lt;script src="../20161226/jquery/jquery-3.1.1.min.js">&lt;/script>
+		&lt;script type="text/javascript">
+			$(document).ready(function(){
+				$("#btn").click(function(){			
+					if($("#myname").val().length&lt;2 || $("#myname").val().length>20){
+					alert("输入名字不合法");
 					return false;
 				}
-				if($("#birthday").val() == ""){
-					alert("出生年月格式不对")
+					if($("#birthday").val() == ""){
+					alert("出生年月不能为空")
+				}
+					var Num = /^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/;
+					if(!Num.test($("#mynumber").val())){
+					alert("手机号码格式不合法");
+					return false;
+				} 				
+				if($("#qq").val().length&lt;6 || $("#qq").val().length>12){
+					alert("QQ号码不合法");
+					return false;
+				}  
+				if($("#college").val().length&lt;2){
+					alert("学院不合法");
 					return false;
 				}
-				var num = /^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/;
-				if(!num.test($("#mobile").val())){
-					alert("手机号格式不对");
+				if($("#tie").val().length&lt;2){
+					alert("系不合法");
 					return false;
 				}
-				if($("#qq").val().length &lt; 6 || $("#qq").val().length > 11){
-					alert("qq格式不对");
+				if($("#major").val().length&lt;2){
+					alert("专业不合法");
 					return false;
 				}
-				if($("#college").val().length &lt; 2 || $("#college").val().length > 100){
-					alert("学院格式不对");
+				if($("#fathername").val().length&lt;2 || $("#fathername").val().length>20){
+					alert("父亲输入名字不合法");
+					return false;
+				} 
+				if(!Num.test($("#fathernumber").val())){
+					alert("手机号码格式不合法");
 					return false;
 				}
-				if($("#faculty").val().length &lt; 2 || $("#faculty").val().length > 110){
-					alert("系格式不对");
+				if($("#mothername").val().length&lt;2 || $("#mothername").val().length>20){
+					alert("母亲输入名字不合法");
 					return false;
 				}
-				if($("#major").val().length &lt; 2 || $("#major").val().length > 110){
-					alert("专业格式不对");
+				if(!Num.test($("#mothernumber").val())){
+					alert("手机号码格式不合法");
 					return false;
 				}
-				if($("#fatherName").val().length &lt; 2 || $("#fatherName").val().length > 11){
-					alert("父亲姓名格式不对");
+				if($("#famliy").val().length&lt;2){
+					alert("家庭地址不合法");
 					return false;
 				}
-				if(!num.test($("#fatherMobile").val())){
-					alert("父亲手机号格式不对");
+				if(!$("input:checked").val()){
+					alert("请填写信息来源");
+				}
+				if($("#majorMemo").val().length>200){
+					alert("专业能力描述小于200字");
 					return false;
 				}
-				if($("#motherName").val().length &lt; 2 || $("#motherName").val().length > 11){
-					alert("母亲姓名格式不对");
+				if($("#evaluate").val().length>200){
+					alert("自我描述小于200字");
 					return false;
 				}
-				if(!num.test($("#motherMobile").val())){
-					alert("母亲手机号格式不对");
-					return false;
-				}
-				if($("#address").val().length&lt;2 || $("#address").val().length>22){
-					alert("住址格式不对");
-					return false;
-				}
-				
-				var m = 0;
-				for (var i = 0 ;i&lt;$("input[name='1']").length;i++) {
-					if($("input[name='1']")[i].checked == true){
-						m++;
-						switch(i){
-							case 0:
-							source = "熟人介绍";
-							break;
-							case 1:
-							source = "杂志";
-							break;
-							case 2:
-							source = "媒体广告";
-							break;
-							case 3:
-							source = "其他";
-							break;
-						}
-					}
-				}
-				if(m == 0){
-					alert("信息来源未选择");
-					return false;
-				}
-				if($("#power").val().length&lt;2 || $("#power").val().length>220){
-					alert("能力描述格式不对");
-					return false;
-				}
-				if($("#selfMemo").val().length&lt;2 || $("#selfMemo").val().length>220){
-					alert("自我描述格式不对");
-					return false;
-				}
-				
-				
-				
 				var _url = "http://www.hemijiaoyu.com/service/addApply";
-				var _data = {};
-				_data.name = name;
-				_data.sex = sex;
-				_data.birthday = birthday;
-				_data.mobile = mobile;
-				_data.political = political;
-				_data.college = college;
-				_data.qq = qq;
-				_data.faculty = faculty;
-				_data.major = major;
-				_data.fatherName = fatherName;
-				_data.fatherMobile = fatherMobile;
-				_data.matherName = matherName;
-				_data.matherMobile = matherMobile;
-				_data.homeAddress = homeAddress;
-				_data.source = source;
-				_data.majorMemo = majorMemo;
-				_data.selfMemo = selfMemo;
-//				_data.createTime = new Date().getTime();
-				
-				
+				var _date = {};
+				_date.name = $("#myname").val();
+				_date.sex = $("#sex").val();
+				var birthday = $("#birthday").val();
+				var birthday1 = birthday.split("-");
+				var bir =birthday1[0]+birthday1[1]
+				_date.birthday = bir;
+				_date.mobile = $("#mynumber").val();
+				_date.political = $("#member").val();
+				_date.college = $("#college").val();
+				_date.qq = $("#qq").val();
+				_date.faculty = $("#tie").val();
+				_date.major = $("#major").val();
+				_date.fatherName = $("#fathername").val();
+				_date.fatherMobile = $("#fathernumber").val();
+				_date.matherName = $("#mothername").val();
+				_date.matherMobile = $("#mothernumber").val();
+				_date.homeAddress = $("#famliy").val();
+				_date.source = $("input:checked").val();
+				_date.majorMemo = $("#majorMemo").val();
+				_date.selfMemo = $("#evaluate").val();
 				$.ajax({
-					type:"post",
 					url:_url,
-					data:_data,
-					dataType:"text",
-					success:function(msg){
-						console.log("pass"+msg)
-					},error:function(error){
-						console.log("fail"+error)
-					}
-				});
+					data:_date,
+					dataType: "text",
+					type:"post",
+					success: function(msg) {
+								console.log(msg);
+				  },error: function(error) {
+								console.log("fail");
+							}
+				})
+				})								
 			})
-		})
-	&lt;/script>
-&lt;/html>
-	 	</pre>
-		
-	 </div>
-	 	
-		
+		&lt;/script>      
+	&lt;/body>
+    &lt;/html>
+		</pre>
+		<a href="Form.html">实例展示</a>
+		</div>
 	</body>
 </html>
-
 
 
 
