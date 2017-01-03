@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{padding: 0;margin: 0;font-family: "微软雅黑";}
+			pre{
+				background: cadetblue;
+			}
+			div{
+				width:1000px;
+				height: auto;
+				margin: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Jquery实例</h1>
+		<a href="9.1.html"><h3>演示一</h3></a>
+		<pre>
+			$(document).ready(function(){
+				$(".tab li").mouseenter(function(){
+					$(this).addClass("active").siblings().removeClass("active")
+					var idx=$(this).index()
+					$(".main").eq(idx).addClass("selected").siblings().removeClass("selected")
+				})
+			})
+		</pre>
+		<a href="9.2.html"><h3>演示二</h3></a>
+		<pre>
+			$(document).ready(function(){
+		var zidx= 0;
+		$("ol li").mouseenter(function(){
+			zidx+=1;
+			$(this).addClass("active").siblings().removeClass("active");
+			var idx = $(this).index();
+			$("ul li").eq(idx).css({
+				"left":600,
+				"z-index":zidx
+			}).animate({
+				"left":0
+			},300);
+		})
+	})
+		</pre>
+		<a href="9.3.html"><h3>演示三</h3></a>
+		<pre>
+			$(function () {
+            $(".wrap li").each(function (i,ele) {
+                $(this).css("background-image","url(img/" + (i + 1) +".jpg)");
+            }).mouseenter(function () {
+                $(this).stop().animate({
+                    "width":600
+                },300).siblings().stop().animate({
+                    "width":200
+                },300)
+            }).mouseleave(function () {
+                $(this).stop().animate({
+                    "width":100
+                },300)
+            });
+        })
+		</pre>
+		<a href="9.5.html"><h3>演示四</h3></a>
+		<pre>
+			$(document).ready(function(){
+		$("#left li").mouseenter(function(){
+			console.log($(this).index());
+			$("#center li").eq($(this).index()).show().siblings().hide();
+		})
+		$("#right li").mouseenter(function(){
+			$("#center li").eq($(this).index()).show().siblings().hide();
+		})
+	})
+		</pre>
+		<a href="9.6.html"><h3>演示五</h3></a>
+		<pre>
+			$(function(){
+				$(window).scroll(function(){
+					var scrtop = $(document).scrollTop();
+					console.log(scrtop)
+					$("#left,#right").stop().animate({
+						"top":scrtop+50
+					},300);
+				})
+				
+			})
+		</pre>
+		<a href="9.7.html"><h3>演示六</h3></a>
+		<pre>
+			$(document).ready(function(){
+				$("#bkq").delay(1000).slideDown();
+				$("#close").click(function(){
+					console.log($("#close"))
+					$(this).parent().fadeOut();
+				})
+			})
+		</pre>
+		<a href="9.8.html"><h3>演示七</h3></a>
+		<pre>
+			$(window).scroll(function() {
+				var scrtop = $(document).scrollTop();
+				console.log(scrtop)
+				if(scrtop > 100 && scrtop < 2000) {
+					$("#bar").fadeIn().offset({
+						top: scrtop + 50,
+						left: 300
+					})
+				} else {
+					$("#bar").fadeOut()
+				}
+
+			});
+		</pre>
+		
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#bkq{
+				position: absolute;
+				right: 0px;
+				bottom: 0px;
+				display: none;
+			}
+			#close{
+				float: right;
+				position: absolute;
+				right: 0px;
+				bottom: 80px;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div id="bkq">
+			<img src="img/12-5.jpg" style="width: 200px;height: 100px;"/>
+			<div id="close">
+				<a style="text-decoration: none;color: #000000;">关闭 X</a>
+			</div>
+		</div>
+		<script src="js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#bkq").delay(1000).slideDown();
+				$("#close").click(function(){
+					console.log($("#close"))
+					$(this).parent().fadeOut();
+				})
+			})
+		</script>
+	</body>
+</html>

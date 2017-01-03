@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.box {
+				width: 1100px;
+				height: 400px;
+				margin: 0 auto;
+				margin-top: 100px;
+			}
+			
+			#bar {
+				width: 50px;
+				height: 400px;
+				background: blueviolet;
+				position: fixed;
+				display: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="bar">
+
+		</div>
+		<script src="js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//			$(function(){
+			//				$(window).scroll(function(){
+			//					var scrtop = $(document).scrollTop();
+			//					console.log(scrtop)
+			//					$("#left,#right").stop().animate({
+			//						"top":scrtop+50
+			//					},300);
+			//				})
+			//				
+			//			})
+			$(window).scroll(function() {
+				var scrtop = $(document).scrollTop();
+				console.log(scrtop)
+				if(scrtop > 100 && scrtop < 2000) {
+					$("#bar").fadeIn().offset({
+						top: scrtop + 50,
+						left: 300
+					})
+				} else {
+					$("#bar").fadeOut()
+				}
+
+			});
+		</script>
+		<div id="black" style="background: black;" class="box">
+
+		</div>
+		<div id="yellow" style="background: yellow;" class="box">
+
+		</div>
+		<div id="red" style="background: red;" class="box">
+
+		</div>
+		<div id="green" style="background: green;" class="box">
+
+		</div>
+	</body>
+
+</html>
