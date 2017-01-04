@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+				font-family: "微软雅黑";
+			}
+			
+			pre {
+				background: cadetblue;
+			}
+			
+			div {
+				width: 1000px;
+				height: auto;
+				margin: auto;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>SQLite</h1>
+		<h3>新建一个表格</h3>
+		<pre>
+			CREATE TABLE database_name.table_name(
+  		 	column1 datatype  PRIMARY KEY(one or more columns),
+   			column2 datatype,
+   			column3 datatype,
+   			.....
+   			columnN datatype,
+			);
+		</pre>
+		<h3>新增一行数据</h3>
+		<pre>
+			INSERT INTO TABLE_NAME (column1, column2, column3,...columnN)]  
+			VALUES (value1, value2, value3,...valueN);
+		</pre>
+		<h3>改</h3>
+		<pre>
+			UPDATE table_name
+			SET column1 = value1, column2 = value2...., columnN = valueN
+			WHERE [condition];
+		</pre>
+		<h3>查</h3>
+		<pre>
+			SELECT column1, column2, columnN 
+			FROM table_name
+			WHERE [condition]
+		</pre>
+		<h3>删</h3>
+		<pre>
+			DELETE FROM table_name
+			WHERE [condition];
+			
+			DROP TABLE database_name.table_name;
+		</pre>
+
+		<h1>百度地图</h1>
+		<pre>
+	&lt;!DOCTYPE html>  
+	&lt;html>  
+	&lt;head>  
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+   	&lt;style type="text/css">  
+        body, html,#allmap {width: 100%;height: 80%;overflow: hidden;margin:0;font-family:"微软雅黑";}  
+    &lt;/style>  
+  <!--引入地图包，地图包网址的ak属性是你在百度地图开放平台上申请的秘钥-->  
+    &lt;script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=fyuj2cNWyiV6zdupOV2RxKVOqaYW9yUP"></script>  
+  <!--引入jquery-->  
+  	&lt;script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>  
+    &lt;title>地址解析</title>  
+	&lt;/head>  
+	&lt;body>  
+  <!--我们要在这里创建地图实例，这个div容器的id属性会在后面用到-->  
+    &lt;div id="allmap"></div>  
+	&lt;/body>  
+	&lt;/html>  
+	&lt;script type="text/javascript">  
+    // 百度地图API功能  
+    var map = new BMap.Map("allmap");//创建百度地图实例，这里的allmap是地图容器的id  
+    var point = new BMap.Point(113.721713, 34.774855);//创建一个点对象，这里的参数是地图上的经纬度  
+    map.centerAndZoom(point, 20);//这里是将地图的中心移动到我们刚才创建的点；这里的12是地图的缩放界别；数值越大，地图看的越细  
+	&lt;/script> 
+		</pre>
+	</body>
+	
+</html>
